@@ -35,7 +35,6 @@ program temperature
         print *, f_to_c(number), degree, 'C'
     end if
  
- 
     if (Temp == 'C') then
         print *, c_to_f(number), degree, "F"
     end if
