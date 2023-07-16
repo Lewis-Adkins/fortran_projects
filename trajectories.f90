@@ -1,8 +1,9 @@
 program trajectories
-    implicit none
+    implicit none 
 
+    real :: g   = 9.81
     real :: pi  = 4 * atan (1.0_16)
-    
+
     real :: t_g_h
     real :: t_h_g
     real :: t_total
@@ -14,7 +15,6 @@ program trajectories
     real :: V0x
     real :: V0y
 
-    real :: g   = 9.81
     real :: theta
     real :: degrees
 
@@ -23,8 +23,7 @@ program trajectories
 
     print *,'Angle (degrees):'
     read *, degrees
-    
-    
+       
     theta = degrees * pi / 180 ! Convert to degrees
 
     V0x         = V0 * cos(theta)
@@ -41,6 +40,8 @@ program trajectories
     t_total     = t_g_h + t_h_g
     distance    =  V0x * t_total
 
-    print *, 'Total distance:', distance, 'meters in', t_total, 'seconds'
+    print *, 'Total distance:', distance, 'meters'
+    print *, ' Time:', t_total, 'seconds'
+    print *, 'Max Height:', height, 'meters'
 
 end program trajectories
