@@ -1,3 +1,4 @@
+! DOWNLOAD quantum.plt FIRST
 program quantum
     use ISO_FORTRAN_ENV, only : REAL128
     implicit none
